@@ -1,0 +1,359 @@
+$font-stack:    "Nunito Sans", sans-serif;
+$brand-color: #F88379;
+$primary-black: #121212;
+$primary-white: #EEEEEE;
+$secondary-color: rgba(131,131,131,0.5);
+
+$break-small: 414px;
+$break-middle: 768px;
+$break-large: 1024px;
+
+
+body {
+    font-family: $font-stack;
+    color: $primary-black;
+    overflow-x: hidden;
+    width: 100vw;
+    margin: 0;
+}
+
+.wrapper {
+  	margin: auto;
+  	padding: 24px;
+  	max-width: 1024px;
+  	overflow-x: visible;
+  	> * {
+  		padding-top: 60px;
+  	}
+  	@media screen and (max-width: $break-large) {
+		overflow-x: hidden;
+	}
+}
+
+// Typography
+
+@mixin font-size($sizeValue: 1.618) {
+	font-size: ($sizeValue * 10) + px;
+  	font-size: $sizeValue + rem;
+}
+
+h1 {
+	font-weight: 900;
+	@include font-size(8);
+	line-height: 1em;
+	margin: 12px 0;
+	@media screen and (max-width: $break-middle) {
+		@include font-size(6);
+	}
+	@media screen and (max-width: $break-small) {
+		@include font-size(5);
+	}
+}
+
+h2 {
+	font-weight: 900;
+	@include font-size(8);
+	-webkit-text-stroke: 1px $secondary-color;
+    color: transparent;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 60px auto;
+    text-align: center;
+    @media screen and (max-width: $break-middle) {
+		@include font-size(6);
+	}
+	@media screen and (max-width: $break-small) {
+		@include font-size(3);
+	}
+}
+
+h3 {
+	font-weight: 700;
+	@include font-size(1.618);
+}
+
+a, p, li, button {
+	font-weight: 300;
+	@include font-size(1);
+	margin: 12px 0;
+}
+
+em {
+	font-weight: 900;
+	font-style: italic;
+}
+
+.icon {
+	width: 24px;
+}
+
+// End of Typography
+
+// Navigations
+
+nav {
+	z-index: 9;
+	background-color: rgba(255,255,255,0.9);
+	position: fixed;
+	width: 100vw;
+	top: 0;
+	left: 0;
+	height: 72px;
+
+	a {
+		line-height: 1.5;
+		padding: 0 24px;
+		color: $primary-black;
+		text-decoration: none;
+		line-height: 48px;
+	}
+
+	.navbar {
+		// position: relative;
+		
+		max-width: 1024px;
+		margin: auto;
+		display: flex;
+	}
+
+	#logo {
+		height: 48px;
+	}
+
+	@media screen and (max-width: $break-small) {
+		.no-s {
+			display: none;
+		}
+	}
+}
+
+// End of Navigations
+
+// Lists & Forms
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+
+	li {
+		padding-left: 24px; 
+	}
+
+	li:before {
+	 	content: "-";
+	 	padding-right: 8px;
+	 	color: $primary-black;
+	}
+}
+
+input[type=text], textarea {
+	width: 100%;
+	box-sizing: border-box;
+	border: 1px solid $secondary-color;
+	border-radius: 12px;
+	padding: 12px 20px;
+	margin: 12px 0;
+}
+
+textarea {
+	height: 72px;
+}
+
+// End of Lists & Forms
+
+// UI Components
+
+.divider {
+	height: 24px;
+}
+
+button {
+	display: block;
+	border: transparent;
+	border-radius: 48px;
+	min-width: 120px;
+}
+
+button.primary {
+	color: $primary-white;
+	background-color: $brand-color;
+	padding: 12px 36px;
+
+}
+
+// End of UI Components
+
+// Page Layout
+
+#home, #about, #portfolio, #contact {
+
+	width: 100%;
+	min-height: calc(100vh - 24px - 60px);
+	position: relative;
+	
+	.left {
+		@media screen and (max-width: $break-large) {
+			width: 100%;
+			height: auto;
+		}
+		width: 70%;
+		max-width: 820px;
+		height: 100%;
+		position: relative;
+		.text {
+			z-index: 1;
+		}
+	}
+	.photo {
+		@media screen and (max-width: $break-small) {
+			display: none;
+		}
+		z-index: -1;
+		height: 100%;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		position: absolute;
+		bottom: 0;
+	}
+}
+
+#home {
+	.icons {
+		@media screen and (max-width: $break-large) {
+			display: none;
+		}
+		position: absolute;
+		bottom: 24px;
+		* {
+			margin: 6px 0;
+		}
+	}
+	.photo {
+		@media screen and (max-width: $break-large) {
+			width: 80%;
+			left: calc(1024px / 2 - 48px);
+		}
+		@media screen and (max-width: $break-middle) {
+			left: calc(768px / 2 - 48px);
+		}
+		width: 40%;
+		right: 0;
+		background-image: linear-gradient(to left, rgba(255,255,255,.5), rgba(255,255,255,.8)), url('images/christine-1.jpg');
+		
+	}
+}
+
+#portfolio {
+	display: flex;
+	flex-wrap: wrap;
+	.portfolio-card {
+		float: left;
+		width: 50%;
+		height: 30vh;
+		min-height: 300px;
+		max-height: 400px;
+		flex: 1 0 auto;
+		position: relative;
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			filter: brightness(80%);
+		}
+		.text {
+			opacity: 0;
+			text-align: left;
+			color: $primary-white;
+			padding: 24px;
+		}
+		:hover {
+			img {
+				transition: transform .5s ease;
+				transform: scale(1.2);
+				filter: brightness(35%) blur(2px);
+			}
+			.text {
+				opacity: 1;
+			}
+		}
+
+		@media screen and (max-width: $break-large) {
+			height: 50vw;
+			max-height: 100%;
+			img {
+				filter: brightness(45%) blur(1px);
+			}
+			.text {
+				opacity: 1;
+			}
+		}
+		@media screen and (max-width: $break-middle) {
+			width: 100%;
+		}
+	}
+}
+
+#about {
+	// h2 {
+	// 	text-align: left;
+	// }
+	// @media screen and (max-width: $break-large) {
+	// 	h2 {
+	// 		text-align: center;
+	// 	}
+	// }
+	.photo {
+		@media screen and (max-width: $break-middle) {
+			display: none;
+		}
+		width: 50%;
+		// height: 100%;
+		// left: calc(1024px / 2 - 48px);
+		left: 0;
+		bottom: 0;
+		background-image: linear-gradient(to right, rgba(255,255,255,.1), rgba(255,255,255,.99)), url('images/christine-2.jpg');
+		filter: blur(.5px);
+		background-position: left;
+	}
+	.text {
+		width: 50%;
+		right: 0;
+		@media screen and (max-width: $break-middle) {
+			width: 100%;
+		}
+	}
+}
+
+#contact {
+	width: 100%;
+}
+
+footer.center {
+	margin: 120px auto 0 auto;
+}
+
+
+.vertical-center {
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.center {
+	width: 100%;
+	max-width: 640px;
+	margin: 0 auto;
+	vertical-align: middle;
+	text-align: center;
+	.icons {
+		> * {
+			margin: 12px;
+		}
+	}
+}
+
+// End of Page Layout
