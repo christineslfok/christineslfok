@@ -168,18 +168,16 @@ textarea {
 	height: 24px;
 }
 
-button {
+.btn-primary {
 	display: block;
 	border: transparent;
 	border-radius: 48px;
+	width: fit-content;
 	min-width: 120px;
-}
-
-button.primary {
+    text-decoration: none;
 	color: $primary-white;
 	background-color: $brand-color;
 	padding: 12px 36px;
-
 }
 
 // End of UI Components

@@ -117,13 +117,13 @@ textarea {
 .divider {
   height: 24px; }
 
-button {
+.btn-primary {
   display: block;
   border: transparent;
   border-radius: 48px;
-  min-width: 120px; }
-
-button.primary {
+  width: fit-content;
+  min-width: 120px;
+  text-decoration: none;
   color: #EEEEEE;
   background-color: #F88379;
   padding: 12px 36px; }
