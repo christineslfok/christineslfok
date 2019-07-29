@@ -166,14 +166,14 @@ textarea {
 #home .photo {
   width: 40%;
   right: 0;
-  background-image: linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.8)), url("images/christine-1.jpg"); }
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0.1), white), url("images/christine-1.jpg"); }
   @media screen and (max-width: 1024px) {
     #home .photo {
       width: 80%;
-      left: calc(1024px / 2 - 48px); } }
+      right: calc((100vw - 1024px * .8) / -2); } }
   @media screen and (max-width: 768px) {
     #home .photo {
-      left: calc(768px / 2 - 48px); } }
+      right: calc((100vw - 414px * .8) / -2); } }
 
 #portfolio {
   display: flex;
@@ -219,7 +219,7 @@ textarea {
   width: 50%;
   left: 0;
   bottom: 0;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.99)), url("images/christine-2.jpg");
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1), white), url("images/christine-2.jpg");
   filter: blur(0.5px);
   background-position: left; }
   @media screen and (max-width: 768px) {

@@ -231,14 +231,14 @@ textarea {
 	.photo {
 		@media screen and (max-width: $break-large) {
 			width: 80%;
-			left: calc(1024px / 2 - 48px);
+			right: calc((100vw - 1024px * .8) / -2);
 		}
 		@media screen and (max-width: $break-middle) {
-			left: calc(768px / 2 - 48px);
+			right: calc((100vw - 414px * .8) / -2);
 		}
 		width: 40%;
 		right: 0;
-		background-image: linear-gradient(to left, rgba(255,255,255,.5), rgba(255,255,255,.8)), url('images/christine-1.jpg');
+		background-image: linear-gradient(to left, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 1)), url('images/christine-1.jpg');
 		
 	}
 }
@@ -295,24 +295,14 @@ textarea {
 }
 
 #about {
-	// h2 {
-	// 	text-align: left;
-	// }
-	// @media screen and (max-width: $break-large) {
-	// 	h2 {
-	// 		text-align: center;
-	// 	}
-	// }
 	.photo {
 		@media screen and (max-width: $break-middle) {
 			display: none;
 		}
 		width: 50%;
-		// height: 100%;
-		// left: calc(1024px / 2 - 48px);
 		left: 0;
 		bottom: 0;
-		background-image: linear-gradient(to right, rgba(255,255,255,.1), rgba(255,255,255,.99)), url('images/christine-2.jpg');
+		background-image: linear-gradient(to right, rgba(255,255,255,.1), rgba(255,255,255,1)), url('images/christine-2.jpg');
 		filter: blur(.5px);
 		background-position: left;
 	}
