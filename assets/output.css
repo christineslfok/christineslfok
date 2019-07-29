@@ -26,7 +26,7 @@ h1 {
     h1 {
       font-size: 60px;
       font-size: 6rem; } }
-  @media screen and (max-width: 414px) {
+  @media screen and (max-width: 480px) {
     h1 {
       font-size: 50px;
       font-size: 5rem; } }
@@ -45,7 +45,7 @@ h2 {
     h2 {
       font-size: 60px;
       font-size: 6rem; } }
-  @media screen and (max-width: 414px) {
+  @media screen and (max-width: 480px) {
     h2 {
       font-size: 30px;
       font-size: 3rem; } }
@@ -88,7 +88,7 @@ nav {
     display: flex; }
   nav #logo {
     height: 48px; }
-  @media screen and (max-width: 414px) {
+  @media screen and (max-width: 480px) {
     nav .no-s {
       display: none; } }
 
@@ -151,7 +151,7 @@ textarea {
     background-repeat: no-repeat;
     position: absolute;
     bottom: 0; }
-    @media screen and (max-width: 414px) {
+    @media screen and (max-width: 480px) {
       #home .photo, #about .photo, #portfolio .photo, #contact .photo {
         display: none; } }
 
