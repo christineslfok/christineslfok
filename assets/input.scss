@@ -1,7 +1,7 @@
 $font-stack:    "Nunito Sans", sans-serif;
-$brand-color: #F88379;
+$brand-color: #fd5c63;
 $primary-black: #121212;
-$primary-white: #EEEEEE;
+$primary-white: #ffffff;
 $secondary-color: rgba(131,131,131,0.5);
 
 $break-small: 480px;
@@ -169,14 +169,19 @@ textarea {
 }
 
 .btn-primary {
+	font-family: $font-stack;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
 	display: block;
+	background: $brand-color;
 	border: transparent;
+	// border: 2px solid $brand-color;
 	border-radius: 48px;
 	width: fit-content;
-	min-width: 120px;
+	min-width: 80px;
     text-decoration: none;
 	color: $primary-white;
-	background-color: $brand-color;
 	padding: 12px 36px;
 }
 

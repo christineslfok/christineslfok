@@ -118,14 +118,18 @@ textarea {
   height: 24px; }
 
 .btn-primary {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
   display: block;
+  background: #fd5c63;
   border: transparent;
   border-radius: 48px;
   width: fit-content;
-  min-width: 120px;
+  min-width: 80px;
   text-decoration: none;
-  color: #EEEEEE;
-  background-color: #F88379;
+  color: #ffffff;
   padding: 12px 36px; }
 
 #home, #about, #portfolio, #contact {
@@ -195,7 +199,7 @@ textarea {
     #portfolio .portfolio-card .text {
       opacity: 0;
       text-align: left;
-      color: #EEEEEE;
+      color: #ffffff;
       padding: 24px; }
     #portfolio .portfolio-card :hover img {
       transition: transform .5s ease;
