@@ -201,7 +201,7 @@ textarea {
 	width: 100%;
 	min-height: calc(100vh - 72px);
 	position: relative;
-	margin-top: 72px;
+	padding-top: 72px;
 	
 	.left {
 		@media screen and (max-width: $break-large) {
@@ -303,9 +303,13 @@ textarea {
 			width: 100%;
 		}
 	}
+}
+
+#contact {
 	h3 {
-		padding: 0;
-		text-align: left;
+		@media screen and (max-width: $break-small) {
+			text-align:left;
+		}
 	}
 }
 
